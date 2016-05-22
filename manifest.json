@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "Flemco Fixes",
+  "description": "General purpose extension to handle things I find annoying.",
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon_128.png",
+    "default_icon": "icon_1.png",
     "default_popup": "popup.html"
   },
   "permissions": [
@@ -14,8 +14,9 @@
     "https://ajax.googleapis.com/"
   ],
   "content_scripts": [{
-      "matches": ["https://github.com/*"],
-      "js": ["domready.js", "github.js"]
+      "matches": ["*://github.com/*files"],
+      "js": ["domready.js", "github.js"],
+      "css": ["styles/github.css"]
     }
   ]
 }
